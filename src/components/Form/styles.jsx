@@ -1,10 +1,14 @@
 import styled from 'styled-components';
-import { colors } from '../../styles/Theme';
+import { colors, device } from '../../styles/Theme';
 
 export const FormWrapper = styled.div`
-  padding: 41px 70px 44px 56px;
   background: ${colors.white};
   border-radius: 4px 0 0 4px;
+  padding: 30px 20px;
+
+  @media ${device.md} {
+    padding: 41px 70px 44px 56px;
+  }
 `;
 
 export const FormTitle = styled.h2`
@@ -17,13 +21,17 @@ export const FormTitle = styled.h2`
 
 export const ResultWrapper = styled.div`
   background: ${colors.gray3};
-  width: 100%;
-  max-width: 231px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 35px;
+  padding: 0 20px;
+
+  @media ${device.md} {
+    width: 100%;
+    padding: 0 35px;
+    max-width: 231px;
+  }
 `;
 
 export const Title = styled.h3`

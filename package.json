@@ -5,7 +5,8 @@
   "author": "Ana Carolina Adescenco Fernandes",
   "license": "MIT",
   "scripts": {
-    "start": "webpack",
+    "build": "webpack",
+    "start": "webpack serve",
     "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run": "cypress run open"

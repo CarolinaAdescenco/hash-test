@@ -1,10 +1,14 @@
 import styled from 'styled-components';
-import { colors } from '../../styles/Theme';
+import { colors, device } from '../../styles/Theme';
 
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: ${({ margin }) => margin};
+  margin: 0 0 15px 0;
+
+  @media ${device.md} {
+    margin: ${({ margin }) => margin};
+  }
 `;
 
 export const Label = styled.label`
@@ -15,7 +19,6 @@ export const Label = styled.label`
 `;
 
 export const InputForm = styled.input`
-  width: 251px;
   border: 1px solid ${colors.gray2};
   border-radius: 4px;
   font-size: 14px;
@@ -24,6 +27,10 @@ export const InputForm = styled.input`
 
   &:focus {
     border-color: ${colors.blue3};
+  }
+
+  @media ${device.md} {
+    width: 251px;
   }
 `;
 

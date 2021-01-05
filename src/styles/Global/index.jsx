@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors } from '../Theme';
+import { colors, device } from '../Theme';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,8 +11,12 @@ export default createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
+    margin: 50px auto;
     background: ${colors.white2};
+
+    @media ${device.md}{
+      margin: 0px;
+      height: 100vh;
+    }
   }
 `;
